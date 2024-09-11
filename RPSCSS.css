@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    
+}
+.heading{ 
+   font-size: 32px;
+   font-weight: bold;
+}
+.pick-one{
+   background: transparent;
+   border: 3px solid white;
+   height: 120px;
+   width: 120px;
+   border-radius: 60px;
+   margin-right: 10px;
+   cursor: pointer;
+}
+.im{
+    height: 50px;
+}
+.res{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+.res-sty{
+    height: 45px;
+}
+.res-score{
+    margin-top: 60px;
+}
+.Reset-button,
+.auto-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 15px;
+    border-radius: 0px;
+    cursor: pointer;
+}

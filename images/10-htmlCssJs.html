@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add-cart{
+            background-color: rgb(255, 216, 20);
+            color: black;
+            border: none;
+            border-radius: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .request-button{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .later-button{
+            border: none;
+            background-color: rgb(209, 205, 205);
+            color:black;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px; 
+        }
+        .Gaming-style{
+            border: none;
+            background-color: rgb(209, 205, 205);
+            color:black;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px; 
+        }
+        .is-toggled{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="add-cart">Add to cart</button>
+    <p>
+        <button class="request-button">Request now</button>
+        <button class="later-button">Schedule for later</button>
+    </p>
+     <p>
+        <button class="js-class">Test</button>
+     </p>
+     <p>
+        <button class="js-button Gaming-style"
+        onclick="changeButton('.js-button')"
+        >Gaming</button>
+        <button class="js-button-1 Gaming-style"
+        onclick="changeButton('.js-button-1')"
+        >Music</button>
+        <button class="js-button-2 Gaming-style"
+        onclick="changeButton('.js-button-2')"
+        >Tech</button>
+     </p>
+    <script>
+        const buttinElemnt=document.querySelector('.js-class');
+        console.log(buttinElemnt.classList.contains('js-class'));
+        function changeButton(selector) {
+        const GamingButton = document.querySelector(selector);
+        if(!GamingButton.classList.contains('is-toggled')){
+            turnOffPB();
+            GamingButton.classList.add('is-toggled');
+        }else {
+            GamingButton.classList.remove('is-toggled');
+        }
+    }/*
+    function changeButton1() {
+        const GamingButton = document.querySelector('.js-button-1');
+        if(!GamingButton.classList.contains('is-toggled')){
+            GamingButton.classList.add('is-toggled');
+        }else {
+            GamingButton.classList.remove('is-toggled');
+        }
+    }
+    function changeButton2() {
+        const GamingButton = document.querySelector('.js-button-2');
+        if(!GamingButton.classList.contains('is-toggled')){
+            GamingButton.classList.add('is-toggled');
+        }else {
+            GamingButton.classList.remove('is-toggled');
+        }
+    } */
+    function turnOffPB(){
+        const previousB = document.querySelector('.is-toggled');
+        if(previousB){
+            previousB.classList.remove('is-toggled');
+        }
+    }
+    </script>
+</body>
+</html>
